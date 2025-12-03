@@ -17,16 +17,15 @@ valid (x,y) = (x >=0 && y >=0) && (x < gridSize && y < gridSize) && ((x,y) `notE
 steps :: Pos -> Action -> (Pos, Double)
 steps pos a =
     let p' = move pos a
-    in if not (valid p') then (pos, -10)  -- Penalidade alta para movimentos inválidos
-        else if p' == goalPos then (p', 100)  -- Recompensa alta para alcançar o objetivo
+    in if not (valid p') then (pos, -10)
+        else if p' == goalPos then (p', 100) 
         else 
             let distToGoal = manhattanDistance p' goalPos
                 prevDist = manhattanDistance pos goalPos
             in if distToGoal < prevDist 
-               then (p', 1)      -- Pequena recompensa por se aproximar do objetivo
-               else (p', -1)     -- Pequena penalidade por se afastar
+               then (p', 1)
+               else (p', -1)
 
--- Calcula a distância de Manhattan entre duas posições
 manhattanDistance :: Pos -> Pos -> Int
 manhattanDistance (x1, y1) (x2, y2) = abs (x1 - x2) + abs (y1 - y2)
 
