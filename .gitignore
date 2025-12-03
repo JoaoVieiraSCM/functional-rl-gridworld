@@ -1,0 +1,67 @@
+# Haskell
+dist/
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+
+# Cabal build artifacts
+dist-newstyle/
+
+# Stack build artifacts
+.stack-work/
+
+# GHCi files
+.ghci
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Backup files
+*.bak
+*.tmp
+*~
+
+# Logs
+*.log
+
+# Package manager
+package-lock.json
+yarn.lock

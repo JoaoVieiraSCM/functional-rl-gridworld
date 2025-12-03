@@ -1,0 +1,23 @@
+cabal-version: 2.4
+name:          RLHaskell
+version:       0.1.0.0
+synopsis:      Reinforcement Learning in Haskell
+description:   A simple reinforcement learning implementation in Haskell
+license:       MIT
+author:        João Vitor Vieira
+maintainer:    joaob=vvscm@gmail.com
+category:      Machine Learning
+build-type:    Simple
+
+executable RLHaskell
+  main-is:          Main.hs
+  other-modules:    Agent,
+                    Environment,
+                    QTable,
+                    Train,
+                    Types
+  hs-source-dirs:   src
+  build-depends:    base >=4.16 && <5
+                  , random >=1.2.0
+                  , containers >=0.6.0
+  default-language: Haskell2010
